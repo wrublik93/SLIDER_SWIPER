@@ -17,6 +17,7 @@
     display: none;
     position: relative;
     margin: 0 auto;
+    animation: 0.5s ease-in-out;
 }
 
 .active,
@@ -70,6 +71,45 @@
 
 .arrow.right {
     right: 50%;
+}
+
+.to-left {
+    animation-name: left;
+}
+
+
+.to-right {
+    animation-name: right;
+    animation-duration: reverse;
+}
+
+.from-left {
+    animation-name: left;
+    animation-duration: reverse;
+}
+
+.from-right {
+    animation-name: right;
+}
+
+@keyframes left {
+    from {
+        left: 0;
+    }
+
+    to {
+        left: -100%;
+    }
+}
+
+@keyframes right {
+    from {
+        left: 100%;
+    }
+
+    to {
+        left: 0;
+    }
 }
 
 @media (max-width: 960px) {
